@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
-const { webpack } = require('webpack');
+const  webpack  = require('webpack');
 
 
 const webpackDevConfig = {
@@ -14,7 +14,7 @@ const webpackDevConfig = {
     filename: 'bundle.js', 
     path: path.resolve(__dirname, 'public' )
   },
-  modules: {
+  module: {
     rules: [
       {
         test: /\.jsx?$/,
@@ -71,7 +71,7 @@ const webpackDevConfig = {
       exclude: /node_modules/,
       failOnError: true
     }),
-    new webpack.HotModuleReplacePlugin(),
+    new webpack.HotModuleReplacementPlugin(),
     new webpack.ProvidePlugin({
       React: 'react',
       ReactDOM: 'react-dom',
