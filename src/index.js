@@ -1,4 +1,5 @@
 import { Provider } from 'react-redux';
+import { HashRouter } from 'react-router-dom'
 import App from './pages/App';
 import configureStore from './redux/store/configureStore';
 
@@ -8,7 +9,9 @@ const store = configureStore();
 
 const BasicApp = () => (
   <Provider store={ store }>
-    <App />
+    <HashRouter>
+      <App />
+    </HashRouter>
   </Provider>
 )
 
