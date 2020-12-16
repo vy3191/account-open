@@ -14,5 +14,8 @@
     "**/node_modules*": true
   },
   "files.trimTrailingWhitespace": false,
-  "diffEditor.ignoreTrimWhitespace": false
+  "diffEditor.ignoreTrimWhitespace": false,
+  "cSpell.words": [
+    "mixins"
+  ]
 }

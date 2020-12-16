@@ -2,6 +2,8 @@ import { Provider } from 'react-redux';
 import App from './pages/App';
 import configureStore from './redux/store/configureStore';
 
+import './scss/main.scss';
+
 const store = configureStore();
 
 const BasicApp = () => (
@@ -10,4 +12,4 @@ const BasicApp = () => (
   </Provider>
 )
 
-ReactDOM.render( <BasicApp />, document.getElementById("root"))
+ReactDOM.render( <BasicApp />, document.getElementById("root"));
