@@ -2,8 +2,8 @@ import { Route, Switch} from 'react-router-dom';
 
 const Router = () => {
   return (
-    <div>
-      
+    <div className='pages-router'>
+      <p>body content goes here with routes</p>
     </div>
   )
 }

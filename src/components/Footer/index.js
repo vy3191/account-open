@@ -1,10 +1,10 @@
 import React from 'react'
 
-function Footer() {
+const Footer  = () => {
   return (
-    <div>
+    <footer>
       <p>&copy; copyright-2020</p>
-    </div>
+    </footer>
   )
 }
 

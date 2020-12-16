@@ -1,9 +1,13 @@
-import React from 'react'
+import Header from '../components/Header';
+import Router from './Router'
+import Footer from '../components/Footer';
 
 const App = () => {
   return (
-    <div>
-      <h1>wired up now</h1>
+    <div className="main-container">
+      <Header />
+      <Router />
+      <Footer />
     </div>
   )
 }
