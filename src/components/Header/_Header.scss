@@ -1,18 +1,9 @@
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   color: white;
   background: brown;
   min-height: 80px;
-  padding: 0px 20px;
-  nav {
-    a {
-      color: white;
-      text-decoration: none;
-    }
-    a+a {
-      margin-left: 20px;
-    }
-  }
+  padding: 0px 20px; 
 }

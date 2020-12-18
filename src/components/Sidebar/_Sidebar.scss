@@ -1,0 +1,12 @@
+.components-sidebar {
+  background: tomato;
+  color: white;
+  height: 100%;
+  ul li a {
+    display: flex;
+    flex: 1 1 auto;
+    padding: 30px;
+    justify-content: center;
+    border-bottom: 1px solid gold;
+  }
+}
