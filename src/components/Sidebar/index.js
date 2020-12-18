@@ -4,6 +4,10 @@ import { NavLink } from 'react-router-dom';
 
 const Sidebar = () => (
     <nav className="components-sidebar">
+      <input type="checkbox" />
+      <span />
+      <span />
+      <span />
       <ul>
         <li><NavLink activeClassName="active" exact replace to="/home">Home</NavLink></li>
         <li><NavLink activeClassName="active" exact replace to="/about">About</NavLink></li>
