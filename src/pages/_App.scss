@@ -1,22 +1,45 @@
+// html, body, #root {
+//   height: 100%;
+//   margin: 0px;
+//   padding: 0px;
+// }
+
+// .main-container {
+//   display: flex;
+//   flex-direction: column;
+//   height: 100vh;
+// }
+
+// .pages-router {
+//   flex-grow: 1;
+//   flex-shrink: 0;
+//   flex-basis: auto;
+// }
+
+// // not required for the layout styles
+// header, footer {
+//   flex-shrink: 0;
+// }
+
 html, body, #root {
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
-.main-container {
-  display: flex;
-  flex-direction: column;
+#root {
   height: 100vh;
 }
 
-.pages-router {
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: auto;
-}
+.main-container {
+  display: flex;  
+  height: 100%;
 
-// not required for the layout styles
-header, footer {
-  flex-shrink: 0;
+  .left {
+    width: 20%;
+  }
+
+  .right {
+    display: flex;
+    flex-grow: 1;
+  }
 }

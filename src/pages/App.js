@@ -1,17 +1,18 @@
-import { Header, Footer, Sidebar } from 'components'
+import { Header, Footer, Sidebar } from 'components';
+import Router from './Router';
 
 const App = () => {
   return (  
-    <React.Fragment>
-      <section className="container left">
+    <div className="main-container">
+      <section className="left">
         <Sidebar />
       </section>
-      <section className="container right">
+      <section className="right">
         <Header />
         <Router />
         <Footer />
       </section>
-    </React.Fragment>
+    </div>
   )
 }
 
