@@ -1,5 +1,6 @@
 .components-sidebar {
-  background: tomato;
+  // background-color: tomato;
+  // background: white;
   color: white;
   height: 100%;
 
@@ -17,7 +18,9 @@
 
     &:checked {
       & ~ ul {
+        padding-top: 100px;
         transform: none;
+        width: 350px;
       }
       & ~ span {
         opacity: 1;
@@ -60,28 +63,21 @@
     }
   }
 
+  ul {     
+    display: flex; 
+    flex-direction: column;
+    margin: -100px 0 0 -50px;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);  
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 
-
-  ul {
-      position: absolute;
-      width: 20%;
-      margin: -100px 0 0 -50px;
-      padding: 50px;
-      padding-top: 125px;  
-      background: #ededed;
-      list-style-type: none;
-      -webkit-font-smoothing: antialiased;
-      transform-origin: 0% 0%;
-      transform: translate(-100%, 0);  
-      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-  }
-  
-
-  ul li a {
-    display: flex;
-    flex: 1 1 auto;
-    padding: 30px;
-    justify-content: center;
-    border-bottom: 1px solid gold;
-  }
+    li a {
+      display: flex;
+      flex: 1 1 auto;
+      padding: 30px;
+      justify-content: center;
+      border-bottom: 1px solid gold;
+    }
+  }  
 }
