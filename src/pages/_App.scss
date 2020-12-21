@@ -12,17 +12,16 @@
   height: 100%;
 
   .left {
-    // width: 180px;
-    background: white;
+    min-width: 0%;
   }
 
   .right {
     display: flex;
-    flex-grow: 1;
+    flex: 1 1;
     flex-direction: column;
-
     .pages-router {
-      flex-grow: 1;
+      flex:1 1;
+      margin: 16px;
     }
   }
 }
