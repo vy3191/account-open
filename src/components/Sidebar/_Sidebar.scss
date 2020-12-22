@@ -2,15 +2,15 @@
 .hamburger {
   position: fixed;
   top: 16px;
+  &-menu svg {
+      color: #000;
+  }  
+}
 
-  &-menu {
-   font-size: 32px; 
-   margin-left: 16px;
-   background: none;
-   svg {
-      color: #000 !important;
-    }
-  } 
+.hamburger-menu {
+  margin-left: 16px;
+  font-size: 32px;
+  background: none;
 }
   
 .components-sidebar {
@@ -21,19 +21,15 @@
   justify-content: center;
   &-nav-items {
      width: 100%;
-    .navbar-close {
-      background-color: #060b26;
-      width: 100%;
-      height: 80px;
-      display: flex;
-      justify-content: start;
-      align-items: center;
-      .hamburger-menu-close {
-        margin-left: 16px;
-        font-size: 32px;
-        background: none;
-      }
-    }
+  }
+
+  .navbar-toggle {
+    background-color: #060b26;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
   }
 
   .nav-text {

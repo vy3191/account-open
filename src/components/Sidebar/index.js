@@ -13,8 +13,8 @@ const Sidebar = () => {
     <IconContext.Provider value={ { color: '#fff'}}>
     { sideBar &&  <nav className="components-sidebar">
         <ul className="component-sidebar-nav-items">
-          <li className="navbar-close">
-            <Link to="/" className="hamburger-menu-close">
+          <li className="navbar-toggle">
+            <Link to="/" className="hamburger-menu">
               <AiOutlineClose />
             </Link>
           </li>
