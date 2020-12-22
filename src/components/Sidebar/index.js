@@ -14,7 +14,10 @@ const Sidebar = () => {
     { sideBar &&  <nav className="components-sidebar">
         <ul className="component-sidebar-nav-items">
           <li className="navbar-toggle">
-            <Link to="/" className="hamburger-menu">
+            <Link to="/" 
+              className="hamburger-menu" 
+              onClick={() => setSideBar(!sideBar)}
+            >
               <AiOutlineClose />
             </Link>
           </li>
