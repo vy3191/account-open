@@ -7,7 +7,7 @@ const PersonalDetailsHandler = () => {
       console.log('values>>>', values)
    }
    return(
-     <PersonalDetailsContainer handleSubmit={ onSubmit }/>
+     <PersonalDetailsContainer onSubmit={ onSubmit }/>
    )
 }
 

@@ -3,12 +3,9 @@ import { reduxForm } from 'redux-form';
 import { AOField } from 'components'
 
 let PersonalDetailsContainer = (props) => {
- 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log('form values>>>', event.target.value)
-  }
-
+  
+  const { handleSubmit } = props;
+  
   return (
     <form onSubmit={handleSubmit}>
       <AOField 
