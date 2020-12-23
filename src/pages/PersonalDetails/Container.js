@@ -1,6 +1,6 @@
 
 import { reduxForm } from 'redux-form';
-import { AOField } from 'components'
+import { AOField, AOButton } from 'components'
 
 let PersonalDetailsContainer = (props) => {
   
@@ -36,7 +36,9 @@ let PersonalDetailsContainer = (props) => {
         label="Email"
         typeName="email"
       />
-      <button type="submit">Continue</button>
+      <AOButton 
+        buttonText="Continue"
+      />
     </form>
   )
 }

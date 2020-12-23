@@ -1,0 +1,14 @@
+.components-ao-button {
+   padding: 7px 12px;
+   box-shadow: none;
+   border: 1px solid;
+
+   &.primary {
+     background-color: green;
+     color: white
+   }
+   &:hover {
+     background: lightblue;
+     color: #000000
+   }
+}
