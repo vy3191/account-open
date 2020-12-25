@@ -4,7 +4,7 @@ const Header = ({user}) => {
 
   return (
     <header>
-      <h1>Account Opening</h1>
+      <h1>Register Form</h1>
     </header>
   )
 }
