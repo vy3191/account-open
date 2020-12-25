@@ -3,6 +3,7 @@
 
   label, .small-print {
     padding-bottom: 6px;
+    display: flex;
   }
   .small-print {
     font-size: 11px;;
@@ -14,7 +15,8 @@
     input {
       display: flex;
       width: 100%;
-      line-height: 32px;
+      line-height: 36px;
+      font-size: 16px;
       padding: 0px 8px;
       outline: 0 none;
       border-radius: 0px;

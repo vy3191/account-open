@@ -52,7 +52,11 @@
       border-radius: 4px;
 
       &:hover {
-        background-color: #1a83ff;
+        background-color:  rgb(142, 187, 202);
+      }
+
+      &.active {
+        background: #1a83ff;
       }
 
       span {
