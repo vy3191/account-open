@@ -20,6 +20,7 @@
     display: flex;
     flex: 1 1;
     flex-direction: column;
+    overflow: auto;
     .pages-router {
       flex:1 1;
       margin: 16px;
