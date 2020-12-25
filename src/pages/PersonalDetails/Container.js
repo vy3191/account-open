@@ -25,6 +25,7 @@ let PersonalDetailsContainer = (props) => {
         id="dob"
         label="Date of Birth"
         hint="MM/DD/YYYY"
+        typeName="date"
       />
       <AOField 
         id="phone"

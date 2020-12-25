@@ -30,7 +30,7 @@ export const navBarItems = [
   {
     title: 'Monthly Expense',
     className: 'nav-text',
-    path: '/monthly-expense',
+    path: '/monthly-expenses',
     icon: <FcBearish />
   },
   {
