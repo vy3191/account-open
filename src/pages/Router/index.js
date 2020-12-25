@@ -11,11 +11,26 @@ const Router = () => {
     <div className='pages-router'>
       <Switch>
         <Redirect exact from="/" to="/personal-details" />
-        <Route path="/personal-details" render={(props) => <PersonalDetails {...props }/>} />
-        <Route path="/previous-address" render={(props) => <PreviousAddressDetails {...props }/>} />
-        <Route path="/current-address" render={(props) => <CurrentAddressDetails {...props }/>} />
-        <Route path="/monthly-income" render={(props) => <MonthlyIncome {...props }/>} />
-        <Route path="/monthly-expenses" render={(props) => <MonthlyExpenses {...props }/>} />
+        <Route 
+          path="/personal-details" 
+          render={(props) => <PersonalDetails {...props }/>} 
+        />
+        <Route 
+          path="/previous-address" 
+          render={(props) => <PreviousAddressDetails {...props }/>} 
+        />
+        <Route 
+          path="/current-address" 
+          render={(props) => <CurrentAddressDetails {...props }/>} 
+        />
+        <Route 
+          path="/monthly-income" 
+          render={(props) => <MonthlyIncome {...props }/>} 
+        />
+        <Route 
+          path="/monthly-expenses" 
+          render={(props) => <MonthlyExpenses {...props }/>} 
+        />
       </Switch>
     </div>
   )
