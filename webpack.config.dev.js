@@ -53,7 +53,8 @@ const webpackDevConfig = {
   resolve: {
     extensions: ['.js', '.jsx', '.css', '.scss'],
     alias: {
-      components: path.resolve(__dirname, 'src/components')
+      components: path.resolve(__dirname, 'src/components'),
+      utils: path.resolve(__dirname, 'src', 'utils')
     }
   },
   mode: 'development',
