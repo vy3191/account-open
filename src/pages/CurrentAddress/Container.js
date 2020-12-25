@@ -49,7 +49,8 @@ let CurrentAddressContainer = (props) => {
 }
 
 CurrentAddressContainer = reduxForm({
-  form: 'currentAddress'
+  form: 'currentAddress',
+  destroyOnUnmount: false
 })(CurrentAddressContainer)
 
 export default CurrentAddressContainer;

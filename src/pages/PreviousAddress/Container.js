@@ -44,7 +44,8 @@ let PreviousAddressContainer = (props) => {
 }
 
 PreviousAddressContainer = reduxForm({
-  form: 'previousAddress'
+  form: 'previousAddress',
+  destroyOnUnmount: false
 })(PreviousAddressContainer)
 
 export default PreviousAddressContainer;

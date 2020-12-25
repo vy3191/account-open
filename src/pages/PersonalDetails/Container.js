@@ -44,7 +44,8 @@ let PersonalDetailsContainer = (props) => {
 }
 
 PersonalDetailsContainer = reduxForm({
-  form: 'personalDetails'
+  form: 'personalDetails',
+  destroyOnUnmount: false
 })(PersonalDetailsContainer)
 
 export default PersonalDetailsContainer;
