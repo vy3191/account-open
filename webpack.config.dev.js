@@ -76,7 +76,8 @@ const webpackDevConfig = {
       React: 'react',
       ReactDOM: 'react-dom',
       PropTypes: 'prop-types'
-    })
+    }),
+    new webpack.DefinePlugin({ DEBUG: true})
   ]
 
 };
