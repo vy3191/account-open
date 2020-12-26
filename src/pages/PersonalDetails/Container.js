@@ -10,30 +10,30 @@ let PersonalDetailsContainer = (props) => {
   
   return (
     <Form onSubmit={handleSubmit}>
-      <AOField 
+      <AOInput 
         id="firstName"
         label="First Name"
       />
-      <AOField 
+      <AOInput 
         id="middleName"
         label="Middle Name"
         hint="Enter if you have any"
       />
-      <AOField 
+      <AOInput 
         id="lastName"
         label="Last Name"
       />
-      <AOField 
+      <AOInput 
         id="dob"
         label="Date of Birth"
         typeName="date"
       />
-      <AOField 
+      <AOInput 
         id="phone"
         label="Contact Number"
         typeName="tel"
       />
-      <AOField 
+      <AOInput 
         id="email"
         label="Email"
         typeName="email"

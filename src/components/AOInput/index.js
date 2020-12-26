@@ -1,6 +1,6 @@
 import { Field } from "redux-form";
 
-const AOField = (props) => {
+const AOInput = (props) => {
    const { componentName, hint,id, label, name, typeName } = props;
 
    return(
@@ -19,12 +19,12 @@ const AOField = (props) => {
    )
 }
 
-AOField.defaultProps = {
+AOInput.defaultProps = {
   componentName: "input",
   type: "text"
 }
 
-AOField.propTypes = {
+AOInput.propTypes = {
   componentName: PropTypes.string,
   hint: PropTypes.string,
   id: PropTypes.string,
@@ -33,7 +33,7 @@ AOField.propTypes = {
   typeName: PropTypes.string
 }
 
-export default AOField;
+export default AOInput;
 
 
 // const Input = ({ type, className, id, name, onChange }) => {

@@ -8,31 +8,31 @@ let PreviousAddressContainer = (props) => {
   
   return (
     <form onSubmit={handleSubmit}>
-      <AOField 
+      <AOInput 
         id="flatNumber"
         label="Flat Number"
       />
-      <AOField 
+      <AOInput 
         id="address-1"
         label="Address-1"
       />
-      <AOField 
+      <AOInput 
         id="address-2"
         label="Address-2"
       />
-      <AOField 
+      <AOInput 
         id="city"
         label="City"
       />
-      <AOField 
+      <AOInput 
         id="state"
         label="State"
       />
-      <AOField 
+      <AOInput 
         id="country"
         label="County"
       />
-       <AOField 
+       <AOInput 
         id="zipCode"
         label="Zip Code"
       />
