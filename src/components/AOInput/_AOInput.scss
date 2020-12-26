@@ -1,6 +1,5 @@
-.components-ao-field {
+.components-ao-input {
   padding-bottom: 24px;
-
   label, .small-print {
     padding-bottom: 6px;
     display: flex;
@@ -8,7 +7,6 @@
   .small-print {
     font-size: 11px;;
   }
-
   .input-field {
     max-width: 240px;
     input {
@@ -28,4 +26,20 @@
       }
     }
   }
+  &.error {
+    color: red;
+
+    label {
+      font-weight: bold;
+    }
+
+    .input-field input {
+      border-color: red;
+    }
+
+    .error-message {
+      margin-top: 4px;
+    }
+  }
+
 }

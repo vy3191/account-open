@@ -5,7 +5,7 @@ const schema = Joi.object({
   lastName: Joi.string().required(),
   dob: Joi.string().required(),
   phone: Joi.string().required(),
-  email: Joi.string().email({ tlds: { allow: false } })
+  email: Joi.string().required()
 });
 
 export default schema;
