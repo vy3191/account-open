@@ -1,9 +1,9 @@
-import Joi from 'joi';
 
 // take a joi schema and create a validator function for redux form
 export default (schema) => {
   return (values) => {
-    const result = Joi.validate(values, schema, { abortEarly: false });
+    const result = schema.validate(values, { abortEarly: false });
+    
     if (result.error === null) {
       return {};
     }
