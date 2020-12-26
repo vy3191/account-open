@@ -1,6 +1,6 @@
 
 import { reduxForm } from 'redux-form';
-import { AOField, AOButton } from 'components'
+import { AOInput, AOButton } from 'components'
 
 let PreviousAddressContainer = (props) => {
   

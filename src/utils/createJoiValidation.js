@@ -14,7 +14,7 @@ export default (schema) => (values) => {
         || (errors[path] = message);
     });
   }  
-  console.log('degub>>>>>>>', DEBUG)
+  
   if (DEBUG) {
     console.log('Log>>>>> createJoiValidator.js', errors)
   }

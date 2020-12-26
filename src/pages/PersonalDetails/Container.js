@@ -1,6 +1,6 @@
 
 import { reduxForm, Form } from 'redux-form';
-import { AOField, AOButton } from 'components';
+import { AOInput, AOButton } from 'components';
 import { createJoiValidation } from 'utils';
 import schema from './schema.joi';
 
