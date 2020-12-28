@@ -4,7 +4,7 @@ export default (schema) => (values) => {
   const result = schema.validate(values, { abortEarly: false }),
         errors = {}
 
-  if (result.error !== null) {
+  if (!!result.error) {
     result.error.details.forEach( (cur) => {
       const path = cur.path[cur.path.length - 1],
             message = cur.message;
