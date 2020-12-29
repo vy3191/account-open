@@ -1,14 +1,11 @@
 import { combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form';
-
-const testReducer = {
-  name: 'still learning redux'
-}
+import loaderReducer from './loader';
 
 const rootReducer = combineReducers(
   { 
     form: formReducer,
-    testReducer
+    loaderReducer
   }
 )
 
