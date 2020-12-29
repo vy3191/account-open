@@ -1,8 +1,19 @@
+import { useEffect } from 'react';
 import { Header, Footer, Loader, Sidebar } from 'components';
+import { useSelector, useDispatch  } from 'react-redux';
 import Router from './Router';
+import { showLoader } from '../redux/actions';
 
 const App = () => {
-  const loader = true;
+  const { loader } = useSelector( (state) => state.loaderReducer),
+          dispatch = useDispatch();
+  console.log('loader from redux', loader);
+  useEffect( () => {
+    dispatch(showLoader(true));
+    setTimeout( () => {
+      dispatch(showLoader(false));
+    }, 3000)
+  },[])
 
   if(loader) {
     return(
