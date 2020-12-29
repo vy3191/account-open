@@ -1,7 +1,20 @@
-import { Header, Footer, Sidebar } from 'components';
+import { Header, Footer, Loader, Sidebar } from 'components';
 import Router from './Router';
 
 const App = () => {
+  const loader = true;
+
+  if(loader) {
+    return(
+      <div className="main-container">
+        <section className="right">
+          <Header />
+          <Loader />
+          <Footer />
+        </section>
+    </div>
+    )
+  }
   return (  
     <div className="main-container">
       <section className="left">

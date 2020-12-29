@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 const  webpack  = require('webpack');
 
 
@@ -77,7 +78,15 @@ const webpackDevConfig = {
       ReactDOM: 'react-dom',
       PropTypes: 'prop-types'
     }),
-    new webpack.DefinePlugin({ DEBUG: true})
+    new webpack.DefinePlugin({ DEBUG: true}),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, 'src/assets'),
+          to: path.resolve(__dirname, 'public/assets')
+        }
+      ]
+    }),
   ]
 
 };
