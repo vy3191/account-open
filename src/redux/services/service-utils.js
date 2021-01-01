@@ -4,46 +4,39 @@ class ServiceUtils {
     this.payload = payload
     this.headers = headers
   }
+
+  fetchRequest(path, method="GET", payload) {
+    const url = `${this.baseUrl}${path}`,
+          reqObj = { method };
+    
+    ['POST', 'PUT'].includes(method) && (
+      reqObj.headers = {
+        "Content-Type": "application/json"
+      },
+      reqObj.body = JSON.stringify(payload)
+    );
+    return fetch(url, reqObj).then(res => res.json());
+  }
  
-  getData(path) {
-    const url = `${this.baseUrl}${path}`
-    return fetch(url).then(res=> res.json())
+  get(path) {
+    return fetchRequest(path)
   }
 
-  postData(path, payload) {
-    const url = `${this.baseUrl}${path}`
-    const obj = {
-      method: 'POST',
-      headers: {
-        "Content-type": 'application/json'
-      },
-      body: payload
-    }
-    return fetch(url, obj).then(res=> res.json())
+  post(path,  payload) {
+    return fetchRequest(path, 'POST', payload)
   }
 
-  updateData(path, post) {
-    const url = `${this.baseUrl}${path}`
-    const obj = {
-      method: 'PUT',
-      headers: {
-        "Content-type": 'application/json'
-      },
-      body: JSON.stringify(payload)
-    }
-    return fetch(url, obj).then(res=> res.json())
+  patch(path,payload) {
+    return fetchRequest(path, 'PATCH', payload)
   }
 
-  deleteData(path,id) {
-    const url = `${this.baseUrl}${path}/${id}`
-    const obj = {
-      method: 'DELETE',
-      headers: {
-        "Content-type": 'application/json'
-      }
-    }
-    return fetch(url, obj).then(res=> res.json())
-
+  put(path, payload) {
+    return fetchRequest(path, 'PUT', payload)
   }
+
+  delete(path) {
+    return fetchRequest(path, 'DELETE');
+  }
+
 
 }
