@@ -2,18 +2,27 @@ import { useEffect } from 'react';
 import { Header, Footer, Loader, Sidebar } from 'components';
 import { useSelector, useDispatch  } from 'react-redux';
 import Router from './Router';
-import { showLoader } from '../redux/actions';
+import { getApplicationById, startApplication } from '../redux/actions';
 
 const App = () => {
-  const { loader } = useSelector( (state) => state.loaderReducer),
-          dispatch = useDispatch();
-  console.log('loader from redux', loader);
+  const { loader, applicationData } = useSelector( (state) => state.applicationReducer),
+          dispatch = useDispatch();        
+ 
   useEffect( () => {
-    dispatch(showLoader(true));
-    setTimeout( () => {
-      dispatch(showLoader(false));
-    }, 3000)
-  },[])
+    const applicationID = window.localStorage.getItem('applicationID');
+
+    if(applicationID) {
+      dispatch(getApplicationById(applicationID))
+    } else {
+      dispatch(startApplication());
+    }
+  },[]);
+
+  useEffect( () => {
+     window.localStorage.setItem('applicationID', applicationData.id)
+  }, [applicationData.id])
+
+
 
   if(loader) {
     return(

@@ -1,8 +1,6 @@
-class ServiceUtils {
-  constructor(baseUrl, payload, headers = {}) {
+export default class ServiceUtils {
+  constructor(baseUrl) {
     this.baseUrl = baseUrl;
-    this.payload = payload
-    this.headers = headers
   }
 
   fetchRequest(path, method="GET", payload) {
@@ -19,24 +17,24 @@ class ServiceUtils {
   }
  
   get(path) {
-    return fetchRequest(path)
+    return this.fetchRequest(path)
   }
 
   post(path,  payload) {
-    return fetchRequest(path, 'POST', payload)
+    return this.fetchRequest(path, 'POST', payload)
   }
 
   patch(path,payload) {
-    return fetchRequest(path, 'PATCH', payload)
+    return this.fetchRequest(path, 'PATCH', payload)
   }
 
   put(path, payload) {
-    return fetchRequest(path, 'PUT', payload)
+    return this.fetchRequest(path, 'PUT', payload)
   }
 
   delete(path) {
-    return fetchRequest(path, 'DELETE');
+    return this.fetchRequest(path, 'DELETE');
   }
 
-
 }
+
