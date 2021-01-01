@@ -1,6 +1,13 @@
 {
   "applications": [
     {
+      "personalDetails": {
+        "firstName": "Venkateshwarlu",
+        "lastName": "Yagatilee",
+        "phone": "8036292367",
+        "email": "venkyafhs@gmail.com",
+        "dob": "1996-01-08"
+      },
       "id": 1
     }
   ]
