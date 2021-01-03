@@ -13,11 +13,11 @@ let CurrentAddressContainer = (props) => {
         label="Flat Number"
       />
       <AOInput 
-        id="address-1"
+        id="address1"
         label="Address-1"
       />
       <AOInput 
-        id="address-2"
+        id="address2"
         label="Address-2"
       />
       <AOInput 

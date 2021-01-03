@@ -14,7 +14,7 @@ export const getApplicationById = (id) => ({
     payload: getApplication(id)
 });
 
-export const saveApplication = (id, payload) => ({
+export const saveApplication = (id, payload, handleSuccess) => ({
     type: SAVE_APPLICATION,
-    payload: updateApplication(id, payload)
+    payload: updateApplication(id, payload, handleSuccess)
 });

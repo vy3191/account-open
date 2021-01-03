@@ -3,7 +3,7 @@ export default class ServiceUtils {
     this.baseUrl = baseUrl;
   }
 
-  fetchRequest(path, method="GET", payload) {
+  fetchRequest(path, method="GET", payload, handleSuccess) {
     const url = `${this.baseUrl}${path}`,
           reqObj = { method };
     
@@ -13,8 +13,13 @@ export default class ServiceUtils {
       },
       reqObj.body = JSON.stringify(payload)
     );
-    return fetch(url, reqObj).then(res => res.json());
-  }
+    return fetch(url, reqObj)
+          .then(res => res.json())
+          .then((data) => { 
+              handleSuccess(); 
+              return data;
+          });
+    }
  
   get(path) {
     return this.fetchRequest(path)
@@ -28,8 +33,8 @@ export default class ServiceUtils {
     return this.fetchRequest(path, 'PATCH', payload)
   }
 
-  put(path, payload) {
-    return this.fetchRequest(path, 'PUT', payload)
+  put(path, payload, handleSuccess) {
+    return this.fetchRequest(path, 'PUT', payload, handleSuccess)
   }
 
   delete(path) {

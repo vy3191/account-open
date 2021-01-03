@@ -6,5 +6,5 @@ export const createApplication = () => services.post('/applications');
 
 export const getApplication = (id) => services.get(`/applications/${id}`);
 
-export const updateApplication = (id, payload) => services.put(`/applications/${id}`, payload);
+export const updateApplication = (id, payload, handleSuccess) => services.put(`/applications/${id}`, payload, handleSuccess);
 

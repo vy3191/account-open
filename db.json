@@ -11,6 +11,13 @@
       "id": 1
     },
     {
+      "personalDetails": {
+        "firstName": "tiktak",
+        "lastName": "taktak",
+        "dob": "1962-09-08",
+        "phone": "234567890",
+        "email": "tiktak@aol.com"
+      },
       "id": 2
     }
   ]
