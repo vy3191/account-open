@@ -7,7 +7,7 @@ export default class ServiceUtils {
     const url = `${this.baseUrl}${path}`,
           reqObj = { method };
     
-    ['POST', 'PUT'].includes(method) && (
+    ['POST', 'PUT', 'PATCH'].includes(method) && (
       reqObj.headers = {
         "Content-Type": "application/json"
       },

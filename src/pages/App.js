@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Header, Footer, Loader, Sidebar } from 'components';
 import { useSelector, useDispatch  } from 'react-redux';
 import Router from './Router';
-import { getApplicationById, startApplication } from '../redux/actions';
+import { getApplicationById, createApplication } from '../redux/actions';
 
 const App = () => {
   const { loader, applicationData } = useSelector( (state) => state.applicationReducer),
@@ -14,12 +14,14 @@ const App = () => {
     if(applicationID) {
       dispatch(getApplicationById(applicationID))
     } else {
-      dispatch(startApplication());
+      dispatch(createApplication());
     }
   },[]);
 
   useEffect( () => {
-     window.localStorage.setItem('applicationID', applicationData.id)
+    console.log('application data',applicationData);
+    if(!applicationData.id) return;
+    window.localStorage.setItem('applicationID', applicationData.id)
   }, [applicationData.id])
 
 

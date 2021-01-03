@@ -1,12 +1,12 @@
-import { createApplication, getApplication, updateApplication } from '../services';
+import { createApplication as createApplicationService, getApplication, updateApplication } from '../services';
 
 export const START_APPLICATION = 'START_APPLICATION';
 export const GET_APPLICATION_BY_ID = 'GET_APPLICATION_BY_ID';
 export const SAVE_APPLICATION = 'SAVE_APPLICATION';
 
-export const startApplication = () => ({
+export const createApplication = () => ({
     type: START_APPLICATION,
-    payload: createApplication()      
+    payload: createApplicationService()      
 });
 
 export const getApplicationById = (id) => ({

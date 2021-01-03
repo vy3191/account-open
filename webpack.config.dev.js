@@ -59,6 +59,7 @@ const webpackDevConfig = {
     }
   },
   mode: 'development',
+  devtool: 'eval-source-map',
   devServer : {
     contentBase: path.resolve(__dirname, 'public'),
     hot: true,
