@@ -1,24 +1,25 @@
 {
   "applications": [
     {
-      "personalDetails": {
-        "firstName": "Venkateshwarlu",
-        "lastName": "Yagatilee",
-        "phone": "8036292367",
-        "email": "venkyafhs@gmail.com",
-        "dob": "1996-01-08"
-      },
       "id": 1
     },
     {
+      "id": 2,
       "personalDetails": {
-        "firstName": "tiktak",
-        "lastName": "taktak",
-        "dob": "1962-09-08",
-        "phone": "234567890",
-        "email": "tiktak@aol.com"
+        "firstName": "aaaa",
+        "lastName": "wwww",
+        "dob": "1956-02-03",
+        "phone": "345345345",
+        "email": "xxxa@gmail.com"
       },
-      "id": 2
+      "previousAddress": {
+        "flatNumber": "mangoes-111",
+        "address-1": "2214 Durand Road",
+        "city": "Fortmill",
+        "state": "SC",
+        "country": "United States",
+        "zipCode": "29715"
+      }
     }
   ]
 }

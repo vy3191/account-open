@@ -63,7 +63,10 @@ const webpackDevConfig = {
   devServer : {
     contentBase: path.resolve(__dirname, 'public'),
     hot: true,
-    host: '0.0.0.0'
+    host: '0.0.0.0',
+    proxy: {
+      '/applications': 'http://localhost:3000'
+    }
   },
   plugins: [
     new HtmlWebpackPlugin({

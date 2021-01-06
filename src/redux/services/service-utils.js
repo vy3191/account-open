@@ -6,17 +6,18 @@ export default class ServiceUtils {
   fetchRequest(path, method="GET", payload, handleSuccess) {
     const url = `${this.baseUrl}${path}`,
           reqObj = { method };
-    
+
     ['POST', 'PUT', 'PATCH'].includes(method) && (
       reqObj.headers = {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*"
       },
       reqObj.body = JSON.stringify(payload)
     );
     return fetch(url, reqObj)
           .then(res => res.json())
           .then((data) => { 
-              handleSuccess(); 
+            handleSuccess && handleSuccess(); 
               return data;
           });
     }
@@ -29,8 +30,8 @@ export default class ServiceUtils {
     return this.fetchRequest(path, 'POST', payload)
   }
 
-  patch(path,payload) {
-    return this.fetchRequest(path, 'PATCH', payload)
+  patch(path,payload, handleSuccess) {
+    return this.fetchRequest(path, 'PATCH', payload, handleSuccess)
   }
 
   put(path, payload, handleSuccess) {

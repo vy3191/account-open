@@ -1,8 +1,18 @@
+import { useDispatch, useSelector } from 'react-redux';
 import PreviousAddressContainer from './Container';
+import { saveApplication } from '../../redux/actions'
 
-function PreviousAddressDetails() {
+function PreviousAddressDetails(props) {
+  const { applicationData: { id }} = useSelector( (state) => state.applicationReducer),
+                  dispatch = useDispatch();
   const onSubmit = values => {
-    console.log('values>>>', values)
+    const previousAddressData = { previousAddress: values}
+    dispatch(saveApplication(id, previousAddressData, handleRoute))
+ }
+
+ const handleRoute = () => {
+   debugger;
+   props.history.push('/current-address');
  }
   return (
     <PreviousAddressContainer onSubmit={ onSubmit }/>
