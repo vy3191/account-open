@@ -19,6 +19,15 @@
         "state": "SC",
         "country": "United States",
         "zipCode": "29715"
+      },
+      "currentAddress": {
+        "flatNumber": "222",
+        "address1": "222 sprint rd",
+        "city": "Sprint city",
+        "state": "NC",
+        "country": "USA",
+        "zipCode": "22222",
+        "movingDate": "2018-02-02"
       }
     }
   ]
