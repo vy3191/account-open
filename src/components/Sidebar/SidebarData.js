@@ -10,17 +10,17 @@ export const navBarItems = [
     icon: <FaUser />
   },
   {
-    title: 'Current Address',
-    className: 'nav-text',
-    path: '/current-address',
-    icon: <FaHome />
-  },
-  {
     title: 'Previous Address',
     className: 'nav-text',
     path: '/previous-address',
     icon: <MdHome />
   },
+  {
+    title: 'Current Address',
+    className: 'nav-text',
+    path: '/current-address',
+    icon: <FaHome />
+  }, 
   {
     title: 'Monthly Income',
     className: 'nav-text',
