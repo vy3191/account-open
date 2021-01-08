@@ -4,6 +4,8 @@ import { PreviousAddressDetails } from '../PreviousAddress';
 import { CurrentAddressDetails } from '../CurrentAddress';
 import { MonthlyIncome } from '../MonthlyIncome';
 import { MonthlyExpenses } from '../MonthlyExpenses';
+import { Products } from '../Products';
+import { ReviewAndEdit } from '../ReviewAndEdit';
 
 
 const Router = () => {
@@ -30,6 +32,14 @@ const Router = () => {
         <Route 
           path="/monthly-expenses" 
           render={(props) => <MonthlyExpenses {...props }/>} 
+        />
+        <Route 
+          path="/products" 
+          render={(props) => <Products {...props }/>} 
+        />
+        <Route 
+          path="/review" 
+          render={(props) => <ReviewAndEdit {...props }/>} 
         />
       </Switch>
     </div>

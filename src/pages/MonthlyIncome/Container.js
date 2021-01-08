@@ -1,6 +1,6 @@
 
 import { reduxForm } from 'redux-form';
-import { AOInput, AOButton } from '../Products/node_modules/components'
+import { AOInput, AOButton } from 'components'
 
 let MonthlyExpensesContainer = (props) => {
   const [isEmployed, setIsEmployed ] = React.useState(false);

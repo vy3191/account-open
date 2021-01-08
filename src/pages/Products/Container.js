@@ -8,22 +8,11 @@ let ProductsContainer = (props) => {
   return (
     <form onSubmit={handleSubmit}>
       <AOInput 
-        id="rent"
-        label="Rent"
-        typeName="number"
+        id="product"
+        label="Product: Credit Card, Loan, Over draft"
+        hint="Either of the above three products or combination of any products separated by comma"
       />
-      <AOInput 
-        id="emi"
-        label="Emi(s)"
-      />
-      <AOInput 
-        id="healthInsurance"
-        label="Health Insurance"
-      />
-      <AOInput 
-        id="otherProducts"
-        label="Other Monthly Expenses*"
-      />
+     
       <AOButton 
         buttonText="Continue"
       />
@@ -32,7 +21,7 @@ let ProductsContainer = (props) => {
 }
 
 ProductsContainer = reduxForm({
-  form: 'currentAddress',
+  form: 'products',
   destroyOnUnmount: false
 })(ProductsContainer)
 
