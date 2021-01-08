@@ -14,7 +14,7 @@ const PersonalDetailsHandler = (props) => {
    };
 
    const handleRoute = () => {
-      props.history.push('/previous-address');
+      props.history.push('/current-address');
    };
 
    return(

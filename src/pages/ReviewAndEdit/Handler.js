@@ -1,9 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
+import { getFormValues } from 'redux-form';
 import { saveApplication} from '../../redux/actions';
-import CurrentAddressContainer from './Container'
+import ReviewAndEditContainer from './Container'
 
 const ReviewAndEdit = (props) => {
-  const { applicationData: {id }} = useSelector(state => state.applicationReducer),
+  const { applicationData: {id }} = useSelector(state => console.log('state>>>', state) || state.applicationReducer),
                       dispatch = useDispatch();
 
   const onSubmit = values => {
@@ -14,10 +15,10 @@ const ReviewAndEdit = (props) => {
  const handleRoute = () => {
    props.history.push("/monthly-income");
  };
-
+  
   return (
     <div>
-      <CurrentAddressContainer onSubmit={ onSubmit }/>
+      <ReviewAndEditContainer onSubmit={ onSubmit }/>
     </div>
   );
 };

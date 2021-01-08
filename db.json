@@ -31,7 +31,31 @@
       }
     },
     {
-      "id": 3
+      "id": 3,
+      "personalDetails": {
+        "firstName": "Venkateshwarlu",
+        "lastName": "Yagatilee",
+        "phone": "8036292367",
+        "email": "venkyafhs@gmail.com",
+        "dob": "1994-02-03"
+      },
+      "previousAddress": {
+        "flatNumber": "207",
+        "address-1": "902 Pine Springs Rd",
+        "city": "Columbia",
+        "state": "SC",
+        "country": "United States",
+        "zipCode": "29210"
+      },
+      "currentAddress": {
+        "flatNumber": "207",
+        "address1": "902 Pine Springs Rd",
+        "city": "Columbia",
+        "state": "SC",
+        "country": "United States",
+        "zipCode": "29210",
+        "moveInDate": "2020-01-02"
+      }
     }
   ]
 }

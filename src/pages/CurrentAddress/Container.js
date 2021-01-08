@@ -37,8 +37,8 @@ let CurrentAddressContainer = (props) => {
         label="Zip Code"
       />
         <AOInput 
-        id="movingDate"
-        label="Moving Date"
+        id="moveInDate"
+        label="Move-in Date"
         typeName="date"        
       />
       <AOButton 
