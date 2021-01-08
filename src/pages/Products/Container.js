@@ -1,8 +1,8 @@
 
 import { reduxForm } from 'redux-form';
-import { AOInput, AOButton } from '../Products/node_modules/components'
+import { AOInput, AOButton } from 'components'
 
-let MonthlyExpensesContainer = (props) => {  
+let ProductsContainer = (props) => {  
   const { handleSubmit } = props;
 
   return (
@@ -21,7 +21,7 @@ let MonthlyExpensesContainer = (props) => {
         label="Health Insurance"
       />
       <AOInput 
-        id="otherMonthlyExpenses"
+        id="otherProducts"
         label="Other Monthly Expenses*"
       />
       <AOButton 
@@ -31,10 +31,10 @@ let MonthlyExpensesContainer = (props) => {
   )
 }
 
-MonthlyExpensesContainer = reduxForm({
+ProductsContainer = reduxForm({
   form: 'currentAddress',
   destroyOnUnmount: false
-})(MonthlyExpensesContainer)
+})(ProductsContainer)
 
-export default MonthlyExpensesContainer;
+export default ProductsContainer;
 
