@@ -62,17 +62,14 @@
         "monthlyIncomeAfterTax": "40000",
         "monthlyIncomeReducedBy": "35000"
       },
-      "monthlyExpe": {
-        "rent": "5600",
-        "emi": "4500",
-        "healthInsurance": "322",
+      "monthlyExpenses": {
+        "rent": "34",
+        "emi": "12",
+        "healthInsurance": "23",
         "otherMonthlyExpenses": "560"
       },
-      "monthlyExpenses": {
-        "rent": "230",
-        "emi": "4500",
-        "healthInsurance": "322",
-        "otherMonthlyExpenses": "560"
+      "products": {
+        "product": "credit card"
       }
     }
   ]

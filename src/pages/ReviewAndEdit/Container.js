@@ -1,9 +1,18 @@
 
 import { reduxForm } from 'redux-form';
+import { useSelector } from 'react-redux';
 import { AOInput, AOButton } from 'components'
 
 let ReviewAndEditContainer = (props) => {
-  
+  const { 
+      applicationData: { 
+        id, 
+        personalDetails, 
+        currentAddress, 
+        previousAddress, 
+        monthlyIncome, 
+        monthlyExpenses }
+    } = useSelector(state => state.applicationReducer);  
   const { handleSubmit } = props;
   
   return (

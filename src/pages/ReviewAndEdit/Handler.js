@@ -4,7 +4,7 @@ import { saveApplication} from '../../redux/actions';
 import ReviewAndEditContainer from './Container'
 
 const ReviewAndEdit = (props) => {
-  const { applicationData: {id }} = useSelector(state => console.log('state>>>', state) || state.applicationReducer),
+  const { applicationData: {id }} = useSelector(state => state.applicationReducer),
                       dispatch = useDispatch();
 
   const onSubmit = values => {

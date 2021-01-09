@@ -4,21 +4,20 @@ import { saveApplication } from '../../redux/actions'
 
 function MonthlyExpenses(props) {
 
-  const {applicationData: {id}} = useSelector((state) => state.applicationReducer),
+  const {applicationData: {id, monthlyExpenses}} = useSelector((state) => state.applicationReducer),
                       dispatch = useDispatch();
   const onSubmit = (values) => {
-    console.log(values);
     const payload = { monthlyExpenses: values}
     dispatch(saveApplication(id,payload, handleRoute ))
   }
 
   const handleRoute = () => {    
-    props.history.push("/review")  
+    props.history.push("/products")  
   };
 
   return (
     <div>
-      <MonthExpensesContainer onSubmit={ onSubmit } />
+      <MonthExpensesContainer onSubmit={ onSubmit } initialValues={ monthlyExpenses }/>
     </div>
   )
 }

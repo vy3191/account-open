@@ -5,7 +5,7 @@ import CurrentAddressContainer from './Container'
 
 const CurrentAddressDetails = (props) => {
   const currentAddressFormSelector = formValueSelector('currentAddress');
-  const { applicationData: { id } } = useSelector(state => state.applicationReducer),
+  const { applicationData: { id, currentAddress } } = useSelector(state => state.applicationReducer),
                       currentMoveInDate = useSelector(state => currentAddressFormSelector(state, 'moveInDate')),
                       dispatch = useDispatch(),
                       todayDate = new Date(),
@@ -31,7 +31,7 @@ const CurrentAddressDetails = (props) => {
 
   return (
     <div>
-      <CurrentAddressContainer onSubmit={ onSubmit }/>
+      <CurrentAddressContainer onSubmit={ onSubmit } initialValues={ currentAddress } />
     </div>
   );
 };

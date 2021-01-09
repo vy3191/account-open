@@ -19,7 +19,6 @@ const App = () => {
   },[]);
 
   useEffect( () => {
-    console.log('application data',applicationData);
     if(!applicationData.id) return;
     window.localStorage.setItem('applicationID', applicationData.id)
   }, [applicationData.id])

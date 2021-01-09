@@ -3,10 +3,9 @@ import MonthIncomeContainer from './Container';
 import { saveApplication } from '../../redux/actions'
 
 function MonthlyIncome(props) {
-  const {applicationData: {id}} = useSelector((state) => state.applicationReducer),
+  const {applicationData: {id, monthlyIncome }} = useSelector((state) => state.applicationReducer),
                       dispatch = useDispatch();
   const onSubmit = (values) => {
-    console.log(values);
     const payload = { monthlyIncome: values}
     dispatch(saveApplication(id,payload, handleRoute ))
   }
@@ -17,7 +16,7 @@ function MonthlyIncome(props) {
 
   return (
     <div>
-      <MonthIncomeContainer onSubmit={ onSubmit } />
+      <MonthIncomeContainer onSubmit={ onSubmit } initialValues={ monthlyIncome } />
     </div>
   )
 }
