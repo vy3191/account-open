@@ -17,7 +17,6 @@ let ReviewAndEditContainer = (props) => {
       });     
    
   return formattedData.map( (item, index) => <Card key={ index } data={ item } />);
-
 }
 
 export default ReviewAndEditContainer;

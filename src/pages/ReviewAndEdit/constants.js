@@ -1,6 +1,8 @@
 
 export const LABELS = {
   personalDetails: {
+    routeKey: '/personal-details',
+    titleKey: 'PERSONAL DETAILS',
     firstName: 'First Name:',
     lastName: 'Last Name:',
     middleName: 'Middle Name:',
@@ -9,6 +11,8 @@ export const LABELS = {
     dob: 'Date Of Birth:'
   },   
   previousAddress: {
+    routeKey: '/previous-address',                 
+    titleKey: 'PREVIOUS ADDRESS',                   
     flatNumber: 'Flat Number:',
     'address-1': 'Address-1:',
     'address-2': 'Address-2:',
@@ -18,6 +22,8 @@ export const LABELS = {
     zipCode: 'Zip code:'
   },
   currentAddress: {
+    routeKey: '/current-address',                 
+    titleKey: 'CURRENT ADDRESS',  
     flatNumber: 'Flat Number:',
     'address-1': 'Address-1:',
     'address-2': 'Address-2:',
@@ -28,6 +34,8 @@ export const LABELS = {
     zipCode: 'Zip code:'
   },
   monthlyIncome: {
+    routeKey: '/monthly-income',                 
+    titleKey: 'MONTHLY INCOME', 
     employmentStatus: 'Employment Status:',
     employerName: 'Employer Name:',
     jobTitle: 'Job Title:',
@@ -36,12 +44,16 @@ export const LABELS = {
     monthlyIncomeReducedBy: 'Monthly Income Reduced By:'
   },
   monthlyExpenses: {
+    routeKey: '/monthly-expenses',                 
+    titleKey: 'MONTHLY EXPENSES', 
     rent: 'Rent:',
     emi: 'EMI(s):',
     healthInsurance: 'Health Insurance:',
     otherMonthlyExpenses: 'Other Monthly Expenses:'
   },
   products: {
+    routeKey: '/products',                 
+    titleKey: 'PRODUCTS', 
     product: 'Product Applied:'
   }
 }
