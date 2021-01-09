@@ -1,11 +1,24 @@
-.components-card {
-  background: lightgray;
+.components-card { 
   padding: 7px;
+  border: 1px solid #ccc;
   &+.components-card {
     margin-top: 7px;
   }
   &:last-of-type {
      margin-bottom: 7px;
+  }
+  h2 {
+    text-align: center;
+    position: relative;
+    .edit {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+  .wrapper {
+
+  
   }
   @media screen and (min-width: 720px) {
       padding: 15px;
