@@ -1,31 +1,23 @@
-
-import { reduxForm } from 'redux-form';
 import { useSelector } from 'react-redux';
-import { AOInput, AOButton } from 'components'
+import { Card } from 'components';
+import { LABELS } from './constants';
 
 let ReviewAndEditContainer = (props) => {
+  const { applicationData } = useSelector(state => state.applicationReducer);  
 
-  const { 
-      applicationData: { 
-        id, 
-        products,
-        personalDetails, 
-        currentAddress, 
-        previousAddress, 
-        monthlyIncome, 
-        monthlyExpenses }
-    } = useSelector(state => state.applicationReducer);  
-  const { handleSubmit } = props;
-  
-  return (
-    <div>Review</div>
-  )
+  const formattedData = Object.keys(applicationData)
+      .filter(item => item !== 'id')
+      .map(item => {
+        const obj = {},
+              response = applicationData[item],
+              reviewLabel = LABELS[item];
+
+        Object.keys(response).forEach(key => (obj[reviewLabel[key]] = response[key]));
+        return obj;
+      });     
+   
+  return formattedData.map( (item, index) => <Card key={ index } data={ item } />);
+
 }
 
-ReviewAndEditContainer = reduxForm({
-  form: 'ReviewAndEdit',
-  destroyOnUnmount: false
-})(ReviewAndEditContainer)
-
 export default ReviewAndEditContainer;
-
