@@ -8,9 +8,12 @@ let ReviewAndEditContainer = (props) => {
   const formattedData = Object.keys(applicationData)
       .filter(item => item !== 'id')
       .map(item => {
-        const obj = {},
-              response = applicationData[item],
-              reviewLabel = LABELS[item];
+        const response = applicationData[item],
+              reviewLabel = LABELS[item],
+              obj = {
+                editPath: reviewLabel.routeKey,
+                title: reviewLabel.titleKey
+              };             
 
         Object.keys(response).forEach(key => (obj[reviewLabel[key]] = response[key]));
         return obj;
