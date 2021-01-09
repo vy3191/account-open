@@ -4,7 +4,7 @@ import PersonalDetailsContainer from './Container';
 import { saveApplication } from '../../redux/actions';
 
 const PersonalDetailsHandler = (props) => {
-   const { applicationData: { id } } = useSelector((state) => state.applicationReducer),
+   const { applicationData: { id, personalDetails } } = useSelector((state) => state.applicationReducer),
          dispatch = useDispatch();      
    
    const onSubmit = values => {     
@@ -18,7 +18,7 @@ const PersonalDetailsHandler = (props) => {
    };
 
    return(
-     <PersonalDetailsContainer onSubmit={ onSubmit }/>
+     <PersonalDetailsContainer onSubmit={ onSubmit } initialValues={ personalDetails } />
    );
 };
 

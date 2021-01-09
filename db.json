@@ -33,11 +33,11 @@
     {
       "id": 3,
       "personalDetails": {
-        "firstName": "Venkateshwarlu",
+        "firstName": "sdfsdfdfsf",
         "lastName": "Yagatilee",
         "phone": "8036292367",
         "email": "venkyafhs@gmail.com",
-        "dob": "1994-02-03"
+        "dob": "1999-12-29"
       },
       "previousAddress": {
         "flatNumber": "207",
@@ -54,7 +54,7 @@
         "state": "SC",
         "country": "United States",
         "zipCode": "29210",
-        "moveInDate": "2020-01-02"
+        "moveInDate": "1999-01-02"
       }
     }
   ]
