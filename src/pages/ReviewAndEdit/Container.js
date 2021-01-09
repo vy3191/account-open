@@ -4,9 +4,11 @@ import { useSelector } from 'react-redux';
 import { AOInput, AOButton } from 'components'
 
 let ReviewAndEditContainer = (props) => {
+
   const { 
       applicationData: { 
         id, 
+        products,
         personalDetails, 
         currentAddress, 
         previousAddress, 

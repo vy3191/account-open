@@ -1,0 +1,19 @@
+.components-card {
+  background: lightgray;
+  padding: 7px;
+  &+.components-card {
+    margin-top: 7px;
+  }
+  &:last-of-type {
+     margin-bottom: 7px;
+  }
+  @media screen and (min-width: 720px) {
+      padding: 15px;
+      &+.components-card {
+        margin-top:15px;
+      }
+      &:last-of-type {
+         margin-bottom:15px;
+      }
+  }
+}
