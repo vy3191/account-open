@@ -55,6 +55,24 @@
         "country": "United States",
         "zipCode": "29210",
         "moveInDate": "1999-01-02"
+      },
+      "monthlyIncome": {
+        "employmentStatus": "self-emp",
+        "grossIncome": "45000",
+        "monthlyIncomeAfterTax": "40000",
+        "monthlyIncomeReducedBy": "35000"
+      },
+      "monthlyExpe": {
+        "rent": "5600",
+        "emi": "4500",
+        "healthInsurance": "322",
+        "otherMonthlyExpenses": "560"
+      },
+      "monthlyExpenses": {
+        "rent": "230",
+        "emi": "4500",
+        "healthInsurance": "322",
+        "otherMonthlyExpenses": "560"
       }
     }
   ]

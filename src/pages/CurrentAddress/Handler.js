@@ -23,8 +23,7 @@ const CurrentAddressDetails = (props) => {
     dispatch(saveApplication(id, payload, handleRoute));
  };
 
- const handleRoute = () => {
-  
+ const handleRoute = () => {  
         ( yearDiff >= 3 )
           ? props.history.push("/monthly-income")
           : props.history.push("/previous-address")
