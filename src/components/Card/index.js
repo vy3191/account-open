@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Card = ({ data: {title, editPath, ...rest} })  => {
   return (
     <article className="components-card">
-      <h2>{title}<Link className="edit" to={ editPath }><BsPencilSquare /></Link></h2>
+      <h3>{title}<Link className="edit" to={ editPath }><BsPencilSquare /></Link></h3>
       <div className="wrapper">
         { 
           /* item = [key, value] */

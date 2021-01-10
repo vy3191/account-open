@@ -1,4 +1,6 @@
 .components-card { 
+  width: 70%;
+  margin: 10px auto;
   padding: 7px;
   border: 1px solid #ccc;
   &+.components-card {
@@ -7,7 +9,7 @@
   &:last-of-type {
      margin-bottom: 7px;
   }
-  h2 {
+  h3 {
     text-align: center;
     position: relative;
     .edit {

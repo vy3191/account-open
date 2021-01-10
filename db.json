@@ -49,7 +49,7 @@
       },
       "currentAddress": {
         "flatNumber": "207",
-        "address1": "902 Pine Springs Rd",
+        "address-1": "902 Pine Springs Rd",
         "city": "Columbia",
         "state": "SC",
         "country": "United States",
@@ -67,6 +67,42 @@
         "emi": "12",
         "healthInsurance": "23",
         "otherMonthlyExpenses": "560"
+      },
+      "products": {
+        "product": "credit card"
+      }
+    },
+    {
+      "id": 4,
+      "personalDetails": {
+        "firstName": "Venkateshwarlu",
+        "lastName": "Yagatilee",
+        "phone": "8036292367",
+        "email": "venkyafhs@gmail.com",
+        "middleName": "bh",
+        "dob": "1999-01-02"
+      },
+      "currentAddress": {
+        "flatNumber": "207",
+        "address1": "2214 Durand Road",
+        "city": "Columbia",
+        "state": "SC",
+        "country": "United States",
+        "zipCode": "29210",
+        "moveInDate": "1999-02-01",
+        "address-1": "902 Pine Springs Rd"
+      },
+      "monthlyIncome": {
+        "employmentStatus": "self-emp",
+        "grossIncome": "34000",
+        "monthlyIncomeAfterTax": "30000",
+        "monthlyIncomeReducedBy": "25000"
+      },
+      "monthlyExpenses": {
+        "rent": "500",
+        "emi": "200",
+        "healthInsurance": "300",
+        "otherMonthlyExpenses": "100"
       },
       "products": {
         "product": "credit card"
