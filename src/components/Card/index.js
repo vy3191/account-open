@@ -9,7 +9,7 @@ const Card = ({ data: {title, editPath, ...rest} })  => {
         { 
           /* item = [key, value] */
           Object.entries(rest).map(([key, value], idx) => (
-            <p><strong>{key}</strong>&nbsp;{value}</p>
+            <p key={idx}><strong>{key}</strong>&nbsp;{value}</p>
           ))
         }
   
