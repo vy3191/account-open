@@ -1,10 +1,11 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import PersonalDetailsContainer from './Container';
-import { saveApplication } from '../../redux/actions';
+import { saveApplication,setIsReview } from '../../redux/actions';
 
 const PersonalDetailsHandler = (props) => {
    const { applicationData: { id, personalDetails } } = useSelector((state) => state.applicationReducer),
+         { isEditFromReview } = useSelector((state) => state.pagesReducer),
          dispatch = useDispatch();      
    
    const onSubmit = values => {     
@@ -14,7 +15,9 @@ const PersonalDetailsHandler = (props) => {
    };
 
    const handleRoute = () => {
-      props.history.push('/current-address');
+      const nextRoute = isEditFromReview && '/review' || '/current-address';
+      props.history.push(nextRoute);
+      dispatch(setIsReview(false));
    };
 
    return(

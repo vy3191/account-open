@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import { Card } from 'components';
 import { LABELS } from './constants';
 
-let ReviewAndEditContainer = (props) => {
+let ReviewAndEditContainer = ({ trackEdit }) => {
   const { applicationData } = useSelector(state => state.applicationReducer);  
 
   const formattedData = Object.keys(applicationData)
@@ -19,7 +19,7 @@ let ReviewAndEditContainer = (props) => {
         return obj;
       });     
    
-  return formattedData.map( (item, index) => <Card key={ index } data={ item } />);
+  return formattedData.map( (item, index) => <Card key={ index } data={ item } trackEdit={ trackEdit } />);
 }
 
 export default ReviewAndEditContainer;

@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { getFormValues } from 'redux-form';
-import { saveApplication} from '../../redux/actions';
+import { saveApplication, setIsReview} from '../../redux/actions';
 import ReviewAndEditContainer from './Container'
 
 const ReviewAndEdit = (props) => {
@@ -10,15 +10,19 @@ const ReviewAndEdit = (props) => {
   const onSubmit = values => {
     const payload = { currentAddress: values};
     dispatch(saveApplication(id, payload, handleRoute));
- };
+  };
 
- const handleRoute = () => {
-   props.history.push("/monthly-income");
- };
+  const handleRoute = () => {
+    props.history.push("/monthly-income");
+  };
+
+  const trackEdit = () => {
+    dispatch(setIsReview(true));
+  };
   
   return (
     <div>
-      <ReviewAndEditContainer onSubmit={ onSubmit }/>
+      <ReviewAndEditContainer onSubmit={ onSubmit } trackEdit={ trackEdit } />
     </div>
   );
 };

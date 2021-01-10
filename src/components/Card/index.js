@@ -1,10 +1,18 @@
 import { BsPencilSquare } from 'react-icons/bs';
 import { Link } from 'react-router-dom'
 
-const Card = ({ data: {title, editPath, ...rest} })  => {
+const Card = ({ trackEdit, data: {title, editPath,  ...rest} })  => {
   return (
     <article className="components-card">
-      <h3>{title}<Link className="edit" to={ editPath }><BsPencilSquare /></Link></h3>
+      <h3>{title}
+        <Link 
+          className="edit" 
+          to={ editPath } 
+          onClick={ trackEdit }
+        >
+          <BsPencilSquare />
+        </Link>
+      </h3>
       <div className="wrapper">
         { 
           /* item = [key, value] */
