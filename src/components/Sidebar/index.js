@@ -1,13 +1,11 @@
-
-
 import { Link,  NavLink } from 'react-router-dom';
 import { navBarItems } from './SidebarData';
 import { AiOutlineClose } from 'react-icons/Ai';
 import { FaBars } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 
-const Sidebar = () => {
-  const [sideBar, setSideBar ] = React.useState(false)
+const Sidebar = ({ editableMenuIds }) => {
+  const [sideBar, setSideBar ] = React.useState(false);
 
   return (    
     <IconContext.Provider value={ { color: '#fff'}}>
@@ -24,7 +22,14 @@ const Sidebar = () => {
           {
             navBarItems.map( (link, index) => (
               <li key={index} className={link.className}>
-                <NavLink activeClassName='active'  exact replace to={link.path}>
+                <NavLink 
+                  activeClassName='active' 
+                  disabled={ !editableMenuIds.includes(link.id) }
+                  to={link.path}
+                  id={link.id}  
+                  replace 
+                  exact 
+                >
                   {link.icon}<span>{link.title}</span>
                 </NavLink>
               </li>
@@ -43,6 +48,14 @@ const Sidebar = () => {
       }
     </IconContext.Provider>
   )
+};
+
+Sidebar.defaultProps = {
+  editableMenuIds: []
+};
+
+Sidebar.propTypes = {
+  editableMenuIds: PropTypes.array
 };
 
 export default Sidebar;

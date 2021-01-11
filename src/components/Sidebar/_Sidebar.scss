@@ -58,6 +58,10 @@
       &.active {
         background: #1a83ff;
       }
+      &[disabled] {
+        cursor: none;
+        pointer-events: none;
+      }
 
       span {
         margin-left: 16px;
