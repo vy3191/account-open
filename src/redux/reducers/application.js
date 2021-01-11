@@ -1,9 +1,11 @@
 import { GET_APPLICATION_BY_ID, START_APPLICATION, SAVE_APPLICATION } from '../actions';
+import { getSavedSectionIds } from '../mappers';
 
 
 const initialState = {
-  loader: false,
   applicationData: {},
+  editableMenuIds: [],
+  loader: false,
   error: false
 }
 
@@ -18,12 +20,20 @@ const applicationReducer = (state=initialState, action) => {
       }
     
     case `${START_APPLICATION}_FULFILLED`:
-    case `${GET_APPLICATION_BY_ID}_FULFILLED`:
     case `${SAVE_APPLICATION}_FULFILLED`:
       return {
         ...state,
         loader: false,
         applicationData: action.payload,
+        error: false
+      } 
+
+    case `${GET_APPLICATION_BY_ID}_FULFILLED`:
+      return {
+        ...state,
+        loader: false,
+        applicationData: action.payload,
+        editableMenuIds: getSavedSectionIds(action.payload),
         error: false
       } 
     

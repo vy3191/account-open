@@ -5,7 +5,7 @@ import Router from './Router';
 import { getApplicationById, createApplication } from '../redux/actions';
 
 const App = () => {
-  const { loader, applicationData } = useSelector( (state) => state.applicationReducer),
+  const { loader, applicationData, editableMenuIds } = useSelector( (state) => state.applicationReducer),
           dispatch = useDispatch();        
  
   useEffect( () => {
@@ -39,7 +39,7 @@ const App = () => {
   return (  
     <div className="main-container">
       <section className="left">
-        <Sidebar />
+        <Sidebar editableMenuIds={ editableMenuIds } />
       </section>
       <section className="right">
         <Header />
