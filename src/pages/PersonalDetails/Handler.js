@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import PersonalDetailsContainer from './Container';
-import { saveApplication,setIsReview } from '../../redux/actions';
+import { saveApplication,setIsReview, setMenuId } from '../../redux/actions';
 
 const PersonalDetailsHandler = (props) => {
    const { applicationData: { id, personalDetails } } = useSelector((state) => state.applicationReducer),
@@ -17,6 +17,7 @@ const PersonalDetailsHandler = (props) => {
    const handleRoute = () => {
       const nextRoute = isEditFromReview && '/review' || '/current-address';
       props.history.push(nextRoute);
+      !isEditFromReview && dispatch(setMenuId('currentAddress'));
       dispatch(setIsReview(false));
    };
 

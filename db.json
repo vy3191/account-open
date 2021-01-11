@@ -1,115 +1,24 @@
 {
   "applications": [
     {
-      "id": 1
-    },
-    {
-      "id": 2,
+      "id": 1,
       "personalDetails": {
-        "firstName": "aaaa",
-        "lastName": "wwww",
-        "dob": "1956-02-03",
-        "phone": "345345345",
-        "email": "xxxa@gmail.com"
-      },
-      "previousAddress": {
-        "flatNumber": "mangoes-111",
-        "address-1": "2214 Durand Road",
-        "city": "Fortmill",
-        "state": "SC",
-        "country": "United States",
-        "zipCode": "29715"
-      },
-      "currentAddress": {
-        "flatNumber": "222",
-        "address1": "222 sprint rd",
-        "city": "Sprint city",
-        "state": "NC",
-        "country": "USA",
-        "zipCode": "22222",
-        "movingDate": "2018-02-02"
-      }
-    },
-    {
-      "id": 3,
-      "personalDetails": {
-        "firstName": "sdfsdfdfsf",
-        "lastName": "Yagatilee",
+        "firstName": "Venky",
         "phone": "8036292367",
-        "email": "venkyafhs@gmail.com",
-        "dob": "1999-12-29"
-      },
-      "previousAddress": {
-        "flatNumber": "207",
-        "address-1": "902 Pine Springs Rd",
-        "city": "Columbia",
-        "state": "SC",
-        "country": "United States",
-        "zipCode": "29210"
+        "middleName": "gc",
+        "email": "venkyafhs@yahoo.com",
+        "dob": "1999-01-02",
+        "lastName": "gggg"
       },
       "currentAddress": {
         "flatNumber": "207",
-        "address-1": "902 Pine Springs Rd",
+        "address1": "902 Pine Springs Rd",
         "city": "Columbia",
         "state": "SC",
         "country": "United States",
         "zipCode": "29210",
-        "moveInDate": "1999-01-02"
-      },
-      "monthlyIncome": {
-        "employmentStatus": "self-emp",
-        "grossIncome": "45000",
-        "monthlyIncomeAfterTax": "40000",
-        "monthlyIncomeReducedBy": "35000"
-      },
-      "monthlyExpenses": {
-        "rent": "34",
-        "emi": "12",
-        "healthInsurance": "23",
-        "otherMonthlyExpenses": "560"
-      },
-      "products": {
-        "product": "credit card"
+        "moveInDate": "1999-01-01"
       }
-    },
-    {
-      "id": 4,
-      "personalDetails": {
-        "firstName": "ffdsfsdfsdfsdf",
-        "lastName": "gaaaaaaaaaaa",
-        "phone": "1111111111",
-        "email": "venkyafhs@gmail.com",
-        "middleName": "aaaaaaaaa",
-        "dob": "1999-01-02"
-      },
-      "currentAddress": {
-        "flatNumber": "207",
-        "address1": "2214 Durand Road",
-        "city": "Columbia",
-        "state": "SC",
-        "country": "United States",
-        "zipCode": "29210",
-        "moveInDate": "1999-02-01",
-        "address-1": "902 Pine Springs Rd"
-      },
-      "monthlyIncome": {
-        "employmentStatus": "self-emp",
-        "grossIncome": "34000",
-        "monthlyIncomeAfterTax": "30000",
-        "monthlyIncomeReducedBy": "25000"
-      },
-      "monthlyExpenses": {
-        "rent": "500",
-        "emi": "200",
-        "healthInsurance": "300",
-        "otherMonthlyExpenses": "100"
-      },
-      "products": {
-        "product": "credit card"
-      }
-    },
-    {
-      "id": 5
     }
   ]
 }

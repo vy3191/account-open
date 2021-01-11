@@ -3,6 +3,7 @@ import { createApplication as createApplicationService, getApplication, updateAp
 export const CREATE_APPLICATION = 'CREATE_APPLICATION';
 export const GET_APPLICATION_BY_ID = 'GET_APPLICATION_BY_ID';
 export const SAVE_APPLICATION = 'SAVE_APPLICATION';
+export const SET_MENU_ID = 'SET_MENU_ID';
 
 export const createApplication = () => ({
     type: CREATE_APPLICATION,
@@ -17,4 +18,11 @@ export const getApplicationById = (id) => ({
 export const saveApplication = (id, payload, handleSuccess) => ({
     type: SAVE_APPLICATION,
     payload: updateApplication(id, payload, handleSuccess)
+});
+
+export const setMenuId = (menuId) => ({
+    type: SET_MENU_ID,
+    meta: {
+        menuId
+    }
 });
