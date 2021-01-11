@@ -1,4 +1,4 @@
-import { GET_APPLICATION_BY_ID, START_APPLICATION, SAVE_APPLICATION } from '../actions';
+import { GET_APPLICATION_BY_ID, CREATE_APPLICATION, SAVE_APPLICATION } from '../actions';
 import { getSavedSectionIds } from '../mappers';
 
 
@@ -11,7 +11,7 @@ const initialState = {
 
 const applicationReducer = (state=initialState, action) => {
   switch(action.type) {
-    case `${START_APPLICATION}_PENDING`:
+    case `${CREATE_APPLICATION}_PENDING`:
     case `${GET_APPLICATION_BY_ID}_PENDING`:
     case `${SAVE_APPLICATION}_PENDING`:
       return {
@@ -19,7 +19,7 @@ const applicationReducer = (state=initialState, action) => {
         loader: true
       }
     
-    case `${START_APPLICATION}_FULFILLED`:
+    case `${CREATE_APPLICATION}_FULFILLED`:
     case `${SAVE_APPLICATION}_FULFILLED`:
       return {
         ...state,
@@ -37,7 +37,7 @@ const applicationReducer = (state=initialState, action) => {
         error: false
       } 
     
-    case `${START_APPLICATION}_REJECTED`:
+    case `${CREATE_APPLICATION}_REJECTED`:
     case `${GET_APPLICATION_BY_ID}_REJECTED`:
     case `${SAVE_APPLICATION}_REJECTED`:
       return {

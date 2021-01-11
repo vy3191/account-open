@@ -1,11 +1,11 @@
 import { createApplication as createApplicationService, getApplication, updateApplication } from '../services';
 
-export const START_APPLICATION = 'START_APPLICATION';
+export const CREATE_APPLICATION = 'CREATE_APPLICATION';
 export const GET_APPLICATION_BY_ID = 'GET_APPLICATION_BY_ID';
 export const SAVE_APPLICATION = 'SAVE_APPLICATION';
 
 export const createApplication = () => ({
-    type: START_APPLICATION,
+    type: CREATE_APPLICATION,
     payload: createApplicationService()      
 });
 
