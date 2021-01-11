@@ -19,3 +19,6 @@ yarn-error.log*
 
 # DB.json file
 ./db.json
+
+# Public folder & files
+public
