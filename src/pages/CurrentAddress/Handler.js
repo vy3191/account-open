@@ -1,11 +1,12 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { formValueSelector } from 'redux-form';
-import { saveApplication} from '../../redux/actions';
+import { saveApplication, setIsReview } from '../../redux/actions';
 import CurrentAddressContainer from './Container'
 
 const CurrentAddressDetails = (props) => {
   const currentAddressFormSelector = formValueSelector('currentAddress');
   const { applicationData: { id, currentAddress } } = useSelector(state => state.applicationReducer),
+                      { isEditFromReview } = useSelector((state) => state.pagesReducer),
                       currentMoveInDate = useSelector(state => currentAddressFormSelector(state, 'moveInDate')),
                       dispatch = useDispatch(),
                       todayDate = new Date(),
@@ -24,9 +25,10 @@ const CurrentAddressDetails = (props) => {
  };
 
  const handleRoute = () => {  
-        ( yearDiff >= 3 )
-          ? props.history.push("/monthly-income")
-          : props.history.push("/previous-address")
+   const route = ( yearDiff >= 3 ) ? "/monthly-income" : "/previous-address";
+   const nextRoute = isEditFromReview && '/review' || route;
+   props.history.push(nextRoute);
+   dispatch(setIsReview(false));
  };
 
   return (

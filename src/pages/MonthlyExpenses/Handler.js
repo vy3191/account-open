@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import MonthExpensesContainer from './Container';
-import { saveApplication } from '../../redux/actions'
+import { saveApplication, setIsReview } from '../../redux/actions'
 
 function MonthlyExpenses(props) {
 

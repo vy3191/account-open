@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import ProductsContainer from './Container';
-import { saveApplication } from '../../redux/actions'
+import { saveApplication, setIsReview } from '../../redux/actions'
 
 function Products(props) {
   const {applicationData: {id , products }} = useSelector(state => state.applicationReducer),

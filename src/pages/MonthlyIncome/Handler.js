@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import MonthIncomeContainer from './Container';
-import { saveApplication } from '../../redux/actions'
+import { saveApplication, setIsReview } from '../../redux/actions'
 
 function MonthlyIncome(props) {
   const {applicationData: {id, monthlyIncome }} = useSelector((state) => state.applicationReducer),

@@ -19,6 +19,49 @@
         "zipCode": "29210",
         "moveInDate": "1999-01-01"
       }
+    },
+    {
+      "id": 2,
+      "personalDetails": {
+        "firstName": "chikky",
+        "lastName": "gina",
+        "phone": "8036292367",
+        "email": "venkyafhs@gmail.com",
+        "middleName": "vb",
+        "dob": "1999-01-02"
+      },
+      "currentAddress": {
+        "flatNumber": "2345",
+        "address1": "210 Kriya yoga",
+        "city": "Rock Hill",
+        "state": "SC",
+        "country": "United States",
+        "zipCode": "29210",
+        "moveInDate": "1999-01-23"
+      },
+      "previousAddress": {
+        "flatNumber": "123",
+        "address1": "2214 Durand Road",
+        "city": "Fortmill",
+        "state": "SC",
+        "country": "United States",
+        "zipCode": "29715"
+      },
+      "monthlyIncome": {
+        "employmentStatus": "self-emp",
+        "grossIncome": "23",
+        "monthlyIncomeAfterTax": "12",
+        "monthlyIncomeReducedBy": "11"
+      },
+      "monthlyExpenses": {
+        "rent": "1",
+        "emi": "200",
+        "healthInsurance": "34",
+        "otherMonthlyExpenses": "45"
+      },
+      "products": {
+        "product": "credit card"
+      }
     }
   ]
 }
