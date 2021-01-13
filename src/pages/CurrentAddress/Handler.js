@@ -16,7 +16,7 @@ const CurrentAddressDetails = (props) => {
   const onSubmit = values => {
     const payload = { currentAddress: values };
 
-    yearDiff < 3 && (payload.previousAddress = null)
+    yearDiff >= 3 && (payload.previousAddress = {})
     // let payload;
     // yearDiff < 3 ?
     // (payload = { currentAddress: values, previousAddress: null}) :

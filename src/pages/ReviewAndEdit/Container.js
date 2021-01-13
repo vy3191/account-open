@@ -4,6 +4,7 @@ import { LABELS } from './constants';
 
 let ReviewAndEditContainer = ({ trackEdit }) => {
   const { applicationData } = useSelector(state => state.applicationReducer);  
+  console.log('applicationData',applicationData)
 
   const formattedData = Object.keys(applicationData)
       .filter(item => item !== 'id')

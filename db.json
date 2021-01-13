@@ -3,64 +3,44 @@
     {
       "id": 1,
       "personalDetails": {
-        "firstName": "Venky",
+        "firstName": "bccc",
         "phone": "8036292367",
-        "middleName": "gc",
-        "email": "venkyafhs@yahoo.com",
-        "dob": "1999-01-02",
-        "lastName": "gggg"
+        "middleName": "XXXXX",
+        "lastName": "Yagatilee",
+        "email": "venkyafhs@gmail.com",
+        "dob": "1999-01-02"
       },
       "currentAddress": {
-        "flatNumber": "207",
+        "flatNumber": "2222222222",
         "address1": "902 Pine Springs Rd",
         "city": "Columbia",
         "state": "SC",
         "country": "United States",
         "zipCode": "29210",
-        "moveInDate": "1999-01-01"
-      }
-    },
-    {
-      "id": 2,
-      "personalDetails": {
-        "firstName": "chikky",
-        "lastName": "gina",
-        "phone": "8036292367",
-        "email": "venkyafhs@gmail.com",
-        "middleName": "vb",
-        "dob": "1999-01-02"
+        "moveInDate": "2020-01-02"
       },
-      "currentAddress": {
-        "flatNumber": "2345",
-        "address1": "210 Kriya yoga",
+      "previousAddress": {
+        "flatNumber": "3333333",
+        "address1": "4212 Galleria Pointe Circle",
         "city": "Rock Hill",
         "state": "SC",
         "country": "United States",
-        "zipCode": "29210",
-        "moveInDate": "1999-01-23"
-      },
-      "previousAddress": {
-        "flatNumber": "123",
-        "address1": "2214 Durand Road",
-        "city": "Fortmill",
-        "state": "SC",
-        "country": "United States",
-        "zipCode": "29715"
+        "zipCode": "29210"
       },
       "monthlyIncome": {
         "employmentStatus": "self-emp",
-        "grossIncome": "23",
-        "monthlyIncomeAfterTax": "12",
-        "monthlyIncomeReducedBy": "11"
+        "grossIncome": "3454345",
+        "monthlyIncomeAfterTax": "11111111",
+        "monthlyIncomeReducedBy": "10000000000"
       },
       "monthlyExpenses": {
         "rent": "1",
-        "emi": "200",
-        "healthInsurance": "34",
-        "otherMonthlyExpenses": "45"
+        "emi": "2",
+        "healthInsurance": "3",
+        "otherMonthlyExpenses": "4"
       },
       "products": {
-        "product": "credit card"
+        "product": "credit card44"
       }
     }
   ]
