@@ -42,6 +42,43 @@
       "products": {
         "product": "credit card44"
       }
+    },
+    {
+      "id": 2,
+      "personalDetails": {
+        "firstName": "venkyAAA",
+        "lastName": "Yagatilee1",
+        "phone": "8036292367",
+        "email": "venkyafhs@gmail.com",
+        "middleName": "VY",
+        "dob": "1999-01-02"
+      },
+      "currentAddress": {
+        "flatNumber": "",
+        "address1": "",
+        "city": "Columbia",
+        "state": "",
+        "country": "",
+        "zipCode": "",
+        "address2": "",
+        "moveInDate": "1990-01-02"
+      },
+      "previousAddress": {},
+      "monthlyIncome": {
+        "employmentStatus": "self-emp",
+        "grossIncome": "20",
+        "monthlyIncomeAfterTax": "15",
+        "monthlyIncomeReducedBy": "10"
+      },
+      "monthlyExpenses": {
+        "rent": "10",
+        "emi": "8",
+        "healthInsurance": "5",
+        "otherMonthlyExpenses": "2"
+      },
+      "products": {
+        "product": "credit card"
+      }
     }
   ]
 }

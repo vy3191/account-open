@@ -1,6 +1,8 @@
 
 import { reduxForm } from 'redux-form';
 import { AOInput, AOButton } from 'components'
+import { createJoiValidation } from 'utils';
+import schema from './schema.joi';
 
 let CurrentAddressContainer = (props) => {
   
@@ -50,7 +52,8 @@ let CurrentAddressContainer = (props) => {
 
 CurrentAddressContainer = reduxForm({
   form: 'currentAddress',
-  destroyOnUnmount: false
+  destroyOnUnmount: false,
+  validate: createJoiValidation(schema)
 })(CurrentAddressContainer)
 
 export default CurrentAddressContainer;
