@@ -1,6 +1,8 @@
 
 import { reduxForm } from 'redux-form';
-import { AOInput, AOButton } from 'components'
+import { AOInput, AOButton } from 'components';
+import { createJoiValidation } from 'utils';
+import schema from './schema.joi';
 
 let MonthlyExpensesContainer = (props) => {
   const [isEmployed, setIsEmployed ] = React.useState(false);
@@ -57,7 +59,8 @@ let MonthlyExpensesContainer = (props) => {
 
 MonthlyExpensesContainer = reduxForm({
   form: 'monthlyIncome',
-  destroyOnUnmount: false
+  destroyOnUnmount: false,
+  validate: createJoiValidation(schema)
 })(MonthlyExpensesContainer)
 
 export default MonthlyExpensesContainer;

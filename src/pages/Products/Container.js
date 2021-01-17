@@ -1,6 +1,8 @@
 
 import { reduxForm } from 'redux-form';
-import { AOInput, AOButton } from 'components'
+import { AOInput, AOButton } from 'components';
+import { createJoiValidation } from 'utils';
+import schema from './schema.joi';
 
 let ProductsContainer = (props) => {  
   const { handleSubmit } = props;
@@ -22,7 +24,8 @@ let ProductsContainer = (props) => {
 
 ProductsContainer = reduxForm({
   form: 'products',
-  destroyOnUnmount: false
+  destroyOnUnmount: false,
+  validate: createJoiValidation(schema)
 })(ProductsContainer)
 
 export default ProductsContainer;

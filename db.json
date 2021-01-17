@@ -65,8 +65,8 @@
       },
       "previousAddress": {},
       "monthlyIncome": {
-        "employmentStatus": "self-emp",
-        "grossIncome": "20",
+        "employmentStatus": "",
+        "grossIncome": "",
         "monthlyIncomeAfterTax": "15",
         "monthlyIncomeReducedBy": "10"
       },
