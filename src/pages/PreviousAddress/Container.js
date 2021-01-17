@@ -1,6 +1,8 @@
 
 import { reduxForm } from 'redux-form';
-import { AOInput, AOButton } from 'components'
+import { AOInput, AOButton } from 'components';
+import { createJoiValidation } from 'utils';
+import schema from './schema.joi';
 
 let PreviousAddressContainer = (props) => {
   
@@ -45,7 +47,8 @@ let PreviousAddressContainer = (props) => {
 
 PreviousAddressContainer = reduxForm({
   form: 'previousAddress',
-  destroyOnUnmount: false
+  destroyOnUnmount: false,
+  validate: createJoiValidation(schema)
 })(PreviousAddressContainer)
 
 export default PreviousAddressContainer;
